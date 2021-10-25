@@ -1,52 +1,52 @@
 module.exports = [{
     type: "input",
-    message: "Please enter the team manager's name.",
+    message: "Please enter the engineer's name.",
     validate: (answer) => {
         if (isNaN(answer)) {
-            console.log("Please enter the team manager's name.");
+            console.log("Please enter the engineer's name.");
             return false;
         }else{
             return true;
         }
     },
-    name: "manager name"
+    name: "engineer name"
 },
 {
     type: "input",
-    message: "Please enter the team manager's employee id number.",
+    message: "Please enter the engineer's employee id number.",
     validate: (answer) => {
         if (isNaN(answer)) {
-            console.log("Please enter the team manager's employee id number.");
+            console.log("Please enter the engineer's employee id number.");
             return false;
         }else{
             return true;
         }
     },
-    name: "manager id"
+    name: "Engineer id"
 },
 {
     type: "input",
-    message: "Please enter the team manager's email address.",
+    message: "Please enter the engineer's email address.",
     validate: (answer) => {
         if (isNaN(answer)) {
-            console.log("Please enter the team manager's email address.");
+            console.log("Please enter the engineer's email address.");
             return false;
         }else{
             return true;
         }
     },
-    name: "manager email"
+    name: "engineer email"
 },
 {
     type: "input",
-    message: "Please enter the team manager's office phone number.",
+    message: "Please enter the engineer's github username.",
     validate: (answer) => {
         if (isNaN(answer)) {
-            console.log("Please enter the team manager's office phone number.");
+            console.log("Please enter the engineer's github username.");
             return false;
         }else{
             return true;
         }
     },
-    name: "manager number"
+    name: "engineer username"
 }];

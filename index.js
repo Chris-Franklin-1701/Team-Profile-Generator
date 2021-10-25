@@ -1,4 +1,3 @@
-const { template } = require("@babel/core");
 const inquirer = require("inquirer");
 const fs = require(fs);
 

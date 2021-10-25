@@ -39,7 +39,8 @@ function generateTeam(){
         }
         inquirer.prompt([{
             type: "input",
-            message: `Please enter the team member's ${roleModifier}.`
+            message: `Please enter the team member's ${roleModifier}.`,
+            name: "modifier"
         },
         {
             type: "checkbox",

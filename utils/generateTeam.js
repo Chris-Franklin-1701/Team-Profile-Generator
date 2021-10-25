@@ -5,7 +5,7 @@ const Engineer = require("../lib/Engineer");
 const Intern = require("../lib/Intern");
 
 
-function addTeamMember(){
+function generateTeam(){
     inquirer.prompt([{
         type: "input",
         message: "Please enter the team member's name.",
@@ -61,7 +61,7 @@ function addTeamMember(){
         addMemberHtml(nextMember)
         .then (function() {
             if (additionalMember === "yes") {
-                addTeamMember();
+                generateTeam();
             }else{
                 generateHtml();
             }
@@ -69,3 +69,5 @@ function addTeamMember(){
         });
     });
 };
+
+module.exports = generateTeam;

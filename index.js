@@ -6,7 +6,7 @@ const fs = require(fs);
 
 
 function init() {
-    inquirer.prompt(managerPrompt).then((answers) => {
+    inquirer.prompt(addTeamMember).then((answers) => {
         //console.log(answers);
         team.push(answers);
         console.log(team);

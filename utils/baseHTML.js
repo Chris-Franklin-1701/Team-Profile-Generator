@@ -1,4 +1,8 @@
+const fs = require("fs");
 
+
+function baseHTML() {
+    const base = `
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -17,25 +21,15 @@
             <p> Your flight team today consists of:</p>
         </div>
         <div class="container bg-success rounded-3">
-            <div class="row justify-content-around"><div class="col-3 rounded-3 bg-info text-dark">
-            <h2>Team Manager:</h2>
-            <p>Name: Jean Luc Picard</p>
-            <p>Employee ID: 1</p>
-            <p>Email Address: JPicard@starfleet.net</p>
-            <p>Office Phone Number: 555-555-1701</p>
-        </div><div class="col-3 rounded-3 bg-warning text-dark">
-            <h2>Engineer:</h2>
-            <p>Name: Jordi LaForge</p>
-            <p>Employee ID: 2</p>
-            <p>Email Address: JLaforge@starfleet.net</p>
-            <p>GitHub Username: jordi.laforger</p>
-        </div><div class="col-3 rounded-3 bg-danger text-dark">
-            <h2>Intern:</h2>
-            <p>Name: Wesley Crusher</p>
-            <p>Employee ID: 3</p>
-            <p>Email Address: WCrusher@starfleet.net</p>
-            <p>School Name: Starfleet Academy</p>
-        </div></div>
-    </div>
-</body>
-</html>
+            <div class="row justify-content-around">`;
+    
+    
+        fs.writeFile("./output/team.html", base, function (err) {
+            if (err) {
+                console.log(err);
+            }
+        });
+        console.log("begin");
+}
+
+module.exports = baseHTML;
